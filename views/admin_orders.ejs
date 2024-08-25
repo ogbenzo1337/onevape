@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zarządzanie Zamówieniami</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Zarządzanie Zamówieniami</h1>
+  </header>
+
+  <div class="container">
+    <h2>Lista Zamówień</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Numer Zamówienia</th>
+          <th>Produkty</th>
+          <th>Kwota</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% orders.forEach(order => { %>
+          <tr>
+            <td><%= order.orderId %></td>
+            <td>
+              <% order.items.forEach(item => { %>
+                <p><%= item.name %> - $<%= item.price.toFixed(2) %></p>
+              <% }) %>
+            </td>
+            <td>$<%= order.total %></td>
+            <td><%= new Date(order.date).toLocaleString() %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Jednorazowe Papierosy</p>
+  </footer>
+</body>
+</html>

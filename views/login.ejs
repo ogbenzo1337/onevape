@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Panel - Logowanie</h1>
+  </header>
+
+  <div class="container">
+    <form action="/login" method="POST">
+      <div>
+        <label for="username">Nazwa użytkownika:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div>
+        <label for="password">Hasło:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Zaloguj się</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Jednorazowe Papierosy</p>
+  </footer>
+</body>
+</html>

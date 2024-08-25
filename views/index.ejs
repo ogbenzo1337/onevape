@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jednorazowe Papierosy</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Jednorazowe Papierosy</h1>
+  </header>
+
+  <div class="container">
+    <h2>Produkty</h2>
+    <div>
+      <button onclick="addToCart({name: 'Papieros A', price: 10.00})">Papieros A - $10.00</button>
+      <button onclick="addToCart({name: 'Papieros B', price: 12.00})">Papieros B - $12.00</button>
+    </div>
+
+    <div class="cart" id="cart">
+      <h3>Koszyk</h3>
+    </div>
+
+    <div id="paypal-button-container" style="display:none;"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Jednorazowe Papierosy</p>
+  </footer>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
